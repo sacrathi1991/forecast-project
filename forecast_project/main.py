@@ -35,7 +35,7 @@ def run():
     df = download_data()
     forecast_df = generate_forecast(df)
     upload_forecast(forecast_df)
-    print("Forecast completed successfully")
+    print("Forecast completed successfully, part 2")
 
 if __name__ == "__main__":
     run()
