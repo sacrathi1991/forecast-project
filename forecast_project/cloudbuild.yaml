@@ -3,3 +3,5 @@ steps:
     args: ['build', '-t', 'gcr.io/project-cfd0578a-68eb-49ae-82d/myimage:$SHORT_SHA', '.']
 images:
   - 'gcr.io/$PROJECT_ID/myimage:$SHORT_SHA'
+options:
+  logging: NONE
