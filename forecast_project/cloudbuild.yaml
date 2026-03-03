@@ -1,7 +1,13 @@
 steps:
   - name: 'gcr.io/cloud-builders/docker'
-    args: ['build', '-t', 'gcr.io/project-cfd0578a-68eb-49ae-82d/myimage:$SHORT_SHA', '.']
+    args: [
+      'build',
+      '-t',
+      'gcr.io/project-cfd0578a-68eb-49ae-82d/forecast-repo:$SHORT_SHA',
+      '.'
+    ]
 images:
-  - 'gcr.io/$PROJECT_ID/myimage:$SHORT_SHA'
+  - 'gcr.io/project-cfd0578a-68eb-49ae-82d/forecast-repo:$SHORT_SHA'
+
 options:
-  logging: NONE
+  logging: CLOUD_LOGGING_ONLY
